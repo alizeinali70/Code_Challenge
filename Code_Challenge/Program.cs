@@ -34,17 +34,18 @@ namespace Code_Challenge
         {
             string[] s1 = { "ali", "reza", "hassan" };
             string[] s2 = { "ali", "reza", "majid" };
-            var t=new List<string>();
+            var t = new List<string>();
+            var a = "";
             foreach (var item2 in s2)
             {
-                 t.Add(s1.Where(x => x.Contains(item2)).FirstOrDefault());                
-                
+                t.Add(s1.Where(x => x.Contains(item2)).FirstOrDefault());
+               a= item2.Remove(0,item2.Length);
             }
-            
+
 
             List<string> s4 = new List<string>();
-           
-           
+
+
 
 
             return s4;
