@@ -22,8 +22,7 @@ namespace Code_Challenge
 
         }
 
-
-        static string covertToinit(string name)
+        static string FirstTwoLetter(string name)
         {
             Console.WriteLine("your name: " + name);
             string[] res = name.Split(' ');
@@ -31,8 +30,43 @@ namespace Code_Challenge
             return name;
         }
 
+        static List<string> MergStrings()
+        {
+            string[] s1 = { "ali", "reza", "hassan" };
+            string[] s2 = { "ali", "reza", "majid" };
+            //string[] S3 = new string[] { };
+
+            List<string> s3 = new List<string>();
+
+
+
+            foreach (var item1 in s1)
+            {
+                foreach(var item2 in s2)
+                {
+                    if (item1 == item2)
+                    {
+                        s3.Add(item1);
+                        
+                        break;
+                    }
+                    else
+                    {
+                        s3.Add(item1);
+                        break;
+                    }
+                }
+                
+
+            }
+            s3.Append(s2.ToString());
+            return s3;
+        }
         static void Main(string[] args)
         {
+
+            Console.WriteLine(string.Join("\t", MergStrings()));
+            Console.ReadLine();
         }
     }
 }
