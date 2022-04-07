@@ -34,33 +34,20 @@ namespace Code_Challenge
         {
             string[] s1 = { "ali", "reza", "hassan" };
             string[] s2 = { "ali", "reza", "majid" };
-            //string[] S3 = new string[] { };
-
-            List<string> s3 = new List<string>();
-
-
-
-            foreach (var item1 in s1)
+            var t=new List<string>();
+            foreach (var item2 in s2)
             {
-                foreach(var item2 in s2)
-                {
-                    if (item1 == item2)
-                    {
-                        s3.Add(item1);
-                        
-                        break;
-                    }
-                    else
-                    {
-                        s3.Add(item1);
-                        break;
-                    }
-                }
+                 t.Add(s1.Where(x => x.Contains(item2)).FirstOrDefault());                
                 
-
             }
-            s3.Append(s2.ToString());
-            return s3;
+            
+
+            List<string> s4 = new List<string>();
+           
+           
+
+
+            return s4;
         }
         static void Main(string[] args)
         {
