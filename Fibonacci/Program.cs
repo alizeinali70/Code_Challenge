@@ -31,5 +31,5 @@ int fibo(int n)
     return fib1;
 }
 
-int result = Fib(3);
+int result = Fib(10);
 Console.WriteLine(result);
